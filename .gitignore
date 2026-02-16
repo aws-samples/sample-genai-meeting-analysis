@@ -1,0 +1,42 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Build outputs
+dist/
+build/
+cdk.out/
+*.tsbuildinfo
+
+# TypeScript compiled output (infrastructure package)
+packages/infrastructure/**/*.js
+packages/infrastructure/**/*.d.ts
+packages/infrastructure/**/*.js.map
+!packages/infrastructure/jest.config.js
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+.kiro/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# CDK
+.cdk.staging/
+cdk.context.json

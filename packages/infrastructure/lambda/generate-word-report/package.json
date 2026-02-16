@@ -1,0 +1,19 @@
+{
+  "name": "generate-word-report",
+  "version": "1.0.0",
+  "description": "Lambda function for generating bilingual Word reports",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.0.0",
+    "@aws-sdk/lib-dynamodb": "^3.0.0",
+    "@aws-sdk/client-s3": "^3.0.0",
+    "@aws-sdk/s3-request-presigner": "^3.0.0",
+    "@aws-sdk/client-bedrock-runtime": "^3.0.0",
+    "docxtemplater": "^3.0.0",
+    "pizzip": "^3.0.0"
+  }
+}

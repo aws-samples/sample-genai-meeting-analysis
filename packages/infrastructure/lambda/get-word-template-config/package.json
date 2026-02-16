@@ -1,0 +1,12 @@
+{
+  "name": "get-word-template-config",
+  "version": "1.0.0",
+  "description": "Lambda function to retrieve Word template configuration",
+  "main": "index.js",
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.709.0",
+    "@aws-sdk/client-s3": "^3.709.0",
+    "@aws-sdk/lib-dynamodb": "^3.709.0",
+    "@aws-sdk/s3-request-presigner": "^3.709.0"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "start-transcription-lambda",
+  "version": "1.0.0",
+  "description": "Lambda function to start Amazon Transcribe job",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.0.0",
+    "@aws-sdk/client-s3": "^3.0.0",
+    "@aws-sdk/client-transcribe": "^3.0.0",
+    "@aws-sdk/lib-dynamodb": "^3.0.0",
+    "@meeting-platform/shared": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.0",
+    "@types/jest": "^29.0.0",
+    "jest": "^29.0.0",
+    "ts-jest": "^29.0.0"
+  }
+}

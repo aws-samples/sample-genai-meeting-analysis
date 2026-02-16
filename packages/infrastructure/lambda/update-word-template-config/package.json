@@ -1,0 +1,10 @@
+{
+  "name": "update-word-template-config",
+  "version": "1.0.0",
+  "description": "Lambda function to update Word template configuration",
+  "main": "index.js",
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.709.0",
+    "@aws-sdk/lib-dynamodb": "^3.709.0"
+  }
+}

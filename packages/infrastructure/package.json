@@ -1,0 +1,47 @@
+{
+  "name": "@meeting-platform/infrastructure",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "build:frontend": "cd ../frontend && npm run build",
+    "cdk": "cdk",
+    "synth": "cdk synth",
+    "deploy": "npm run build:frontend && cdk deploy",
+    "deploy:all": "npm run build:frontend && cdk deploy --all --require-approval never",
+    "deploy:frontend-stack": "npm run build:frontend && cdk deploy MeetingPlatform-Frontend",
+    "clean": "rm -rf cdk.out dist",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "dependencies": {
+    "@aws-sdk/client-bedrock-runtime": "^3.931.0",
+    "@aws-sdk/client-dynamodb": "^3.709.0",
+    "@aws-sdk/client-lambda": "^3.931.0",
+    "@aws-sdk/client-s3": "^3.709.0",
+    "@aws-sdk/client-sfn": "^3.709.0",
+    "@aws-sdk/client-transcribe": "^3.709.0",
+    "@aws-sdk/lib-dynamodb": "^3.709.0",
+    "@aws-sdk/s3-request-presigner": "^3.709.0",
+    "@meeting-platform/shared": "*",
+    "aws-cdk-lib": "^2.224.0",
+    "constructs": "^10.4.3",
+    "docxtemplater": "^3.67.5",
+    "dotenv": "^17.2.3",
+    "jszip": "^3.10.1",
+    "pizzip": "^3.2.0"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.145",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^20.19.25",
+    "aws-cdk": "^2.224.0",
+    "aws-sdk-client-mock": "^4.1.0",
+    "fast-check": "^4.3.0",
+    "jest": "^29.7.0",
+    "source-map-support": "^0.5.21",
+    "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
