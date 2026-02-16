@@ -84,9 +84,9 @@ export const WordTemplateSettings: React.FC<WordTemplateSettingsProps> = ({
       setConfig(data);
       
       if (data) {
-        setSourceLanguage(data.sourceLanguage);
-        setTargetLanguage(data.targetLanguage);
-        setPlaceholders(data.placeholders);
+        setSourceLanguage(data.sourceLanguage || 'en');
+        setTargetLanguage(data.targetLanguage || 'es');
+        setPlaceholders(data.placeholders ?? []);
         setTemplateName(data.templateName);
       }
     } catch (err: any) {
@@ -167,7 +167,7 @@ export const WordTemplateSettings: React.FC<WordTemplateSettingsProps> = ({
       // Clear success after 5 seconds
       setTimeout(() => setSuccess(null), 5000);
     } catch (err: any) {
-      setError(err.response?.data?.message || err.message || 'Failed to upload template');
+      setError(err.response?.data?.error?.message || err.message || 'Failed to upload template');
     } finally {
       setUploading(false);
       setUploadProgress(0);
@@ -183,14 +183,20 @@ export const WordTemplateSettings: React.FC<WordTemplateSettingsProps> = ({
       
       if (type === 'source') {
         setSourceLanguage(value);
-        await updateWordTemplateConfig({ sourceLanguage: value });
       } else {
         setTargetLanguage(value);
-        await updateWordTemplateConfig({ targetLanguage: value });
       }
-      
-      setSuccess('Language settings updated');
-      setTimeout(() => setSuccess(null), 3000);
+
+      // Only persist to backend if a config already exists
+      if (config) {
+        if (type === 'source') {
+          await updateWordTemplateConfig({ sourceLanguage: value });
+        } else {
+          await updateWordTemplateConfig({ targetLanguage: value });
+        }
+        setSuccess('Language settings updated');
+        setTimeout(() => setSuccess(null), 3000);
+      }
     } catch (err: any) {
       setError(err.message || 'Failed to update language settings');
       // Revert on error
@@ -343,47 +349,43 @@ export const WordTemplateSettings: React.FC<WordTemplateSettingsProps> = ({
         )}
 
         {/* Language Selection Section */}
-        {config && (
-          <>
-            <Box variant="h3">Translation Languages</Box>
-            <ColumnLayout columns={2}>
-              <FormField
-                label="Source Language"
-                description="Language of the original meeting content"
-              >
-                <Select
-                  selectedOption={
-                    languageOptions.find((o) => o.value === sourceLanguage) || null
-                  }
-                  onChange={({ detail }) =>
-                    handleLanguageChange('source', detail.selectedOption.value!)
-                  }
-                  options={languageOptions}
-                  placeholder="Select source language"
-                />
-              </FormField>
+        <Box variant="h3">Translation Languages</Box>
+        <ColumnLayout columns={2}>
+          <FormField
+            label="Source Language"
+            description="Language of the original meeting content"
+          >
+            <Select
+              selectedOption={
+                languageOptions.find((o) => o.value === sourceLanguage) || null
+              }
+              onChange={({ detail }) =>
+                handleLanguageChange('source', detail.selectedOption.value!)
+              }
+              options={languageOptions}
+              placeholder="Select source language"
+            />
+          </FormField>
 
-              <FormField
-                label="Target Language"
-                description="Language to translate content into"
-              >
-                <Select
-                  selectedOption={
-                    languageOptions.find((o) => o.value === targetLanguage) || null
-                  }
-                  onChange={({ detail }) =>
-                    handleLanguageChange('target', detail.selectedOption.value!)
-                  }
-                  options={languageOptions}
-                  placeholder="Select target language"
-                />
-              </FormField>
-            </ColumnLayout>
-          </>
-        )}
+          <FormField
+            label="Target Language"
+            description="Language to translate content into"
+          >
+            <Select
+              selectedOption={
+                languageOptions.find((o) => o.value === targetLanguage) || null
+              }
+              onChange={({ detail }) =>
+                handleLanguageChange('target', detail.selectedOption.value!)
+              }
+              options={languageOptions}
+              placeholder="Select target language"
+            />
+          </FormField>
+        </ColumnLayout>
 
         {/* Placeholder Translation Toggles */}
-        {config && placeholders.length > 0 && (
+        {config && placeholders?.length > 0 && (
           <>
             <Box variant="h3">Placeholder Translation Settings</Box>
             <Box variant="p" color="text-body-secondary">
