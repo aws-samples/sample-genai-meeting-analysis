@@ -20,6 +20,12 @@ A serverless web application for uploading, transcribing, and analyzing meeting 
 # Install dependencies
 npm install
 
+# Build the shared dependencies
+npm run build --workspace=packages/shared
+
+# Build the frontend
+npm run build --workspace=packages/frontend
+
 # Deploy all infrastructure
 cd packages/infrastructure
 cdk bootstrap
