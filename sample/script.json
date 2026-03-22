@@ -1,0 +1,45 @@
+{
+  "meeting": {
+    "title": "Q1 2026 Board Meeting - Acme Corp",
+    "date": "2026-03-15",
+    "location": "Acme Corp HQ, Conference Room A",
+    "company": "Acme Corp",
+    "participants": [
+      { "name": "Sarah Chen", "role": "CEO", "voice": "Danielle" },
+      { "name": "Michael Torres", "role": "CFO", "voice": "Matthew" },
+      { "name": "Priya Sharma", "role": "CTO", "voice": "Kendra" },
+      { "name": "James Wilson", "role": "VP Sales", "voice": "Stephen" },
+      { "name": "Elena Popescu", "role": "VP Operations", "voice": "Ruth" }
+    ]
+  },
+  "segments": [
+    { "speaker": "Sarah Chen", "text": "Good morning everyone. Let's get started with our Q1 2026 board meeting. I'd like to begin by reviewing our financial performance for the quarter. Michael, could you walk us through the numbers?" },
+    { "speaker": "Michael Torres", "text": "Thank you, Sarah. I'm pleased to report that Q1 revenue came in at forty-two point three million dollars, which represents a seventeen percent year-over-year increase. Our gross margin improved to sixty-eight percent, up from sixty-four percent in Q1 last year. Operating expenses were well controlled at twenty-six million, keeping us within budget. Net income for the quarter was eight point one million dollars." },
+    { "speaker": "Sarah Chen", "text": "That's excellent progress. What were the main drivers behind the margin improvement?" },
+    { "speaker": "Michael Torres", "text": "Two main factors. First, our cloud infrastructure migration reduced hosting costs by approximately one point two million per quarter. Second, the new automated billing system decreased our accounts receivable cycle from forty-five days to thirty-two days, improving our cash flow significantly." },
+    { "speaker": "James Wilson", "text": "I'd like to add that from a sales perspective, we closed thirty-seven new enterprise deals this quarter, with an average contract value of two hundred and fifteen thousand dollars. Our pipeline is also looking strong, with over sixty million in qualified opportunities for Q2." },
+    { "speaker": "Sarah Chen", "text": "Great numbers, James. Let's move to the product roadmap. Priya, can you give us an update on the technology initiatives?" },
+    { "speaker": "Priya Sharma", "text": "Absolutely. We have three major initiatives underway. First, our AI-powered analytics platform is on track for beta launch in April. We've completed the core machine learning models and are now focused on the user interface and API integrations. Early testing shows a forty percent improvement in prediction accuracy compared to our current solution." },
+    { "speaker": "Priya Sharma", "text": "Second, the mobile application redesign is progressing well. We've adopted a new design system that improves accessibility compliance and reduces page load times by sixty percent. The new app will support offline mode, which was our most requested feature from enterprise customers." },
+    { "speaker": "Priya Sharma", "text": "Third, we're investing in our data platform. We're migrating from our legacy data warehouse to a modern lakehouse architecture on AWS. This will enable real-time analytics and reduce our data processing costs by approximately thirty-five percent annually." },
+    { "speaker": "Elena Popescu", "text": "On the operations side, I want to flag a concern about the data platform migration timeline. Our current estimate is six months, but based on similar migrations I've seen, we should plan for eight to nine months to account for data quality issues and testing." },
+    { "speaker": "Priya Sharma", "text": "That's a fair point, Elena. I agree we should build in a buffer. I'll revise the timeline to eight months and add additional data validation checkpoints." },
+    { "speaker": "Sarah Chen", "text": "Good. Let's make sure we have a realistic timeline rather than an optimistic one. Now, Elena, can you update us on the operational efficiency program?" },
+    { "speaker": "Elena Popescu", "text": "Yes. Our operational efficiency program delivered significant results this quarter. We reduced customer support ticket resolution time from twenty-four hours to eight hours through our new AI-assisted triage system. Customer satisfaction scores improved from eighty-two to ninety-one percent. We also completed the consolidation of our three regional data centers into two, which will save approximately eight hundred thousand dollars annually." },
+    { "speaker": "Elena Popescu", "text": "However, I need to raise a staffing concern. With the growth we're projecting, we need to hire fifteen additional engineers and eight customer success managers by the end of Q2. Our current hiring pipeline has only twelve candidates in final stages." },
+    { "speaker": "Sarah Chen", "text": "That's an important flag. Michael, do we have the budget for these hires?" },
+    { "speaker": "Michael Torres", "text": "Yes, we budgeted for twenty new hires in Q2. The challenge is more about finding the right talent quickly. I'd recommend we engage two additional recruiting agencies and consider increasing our referral bonus from five thousand to eight thousand dollars." },
+    { "speaker": "James Wilson", "text": "I'd also suggest we look at our employer branding. I've been hearing from candidates that our competitors are more visible at tech conferences and on social media. We should invest in our presence at key industry events." },
+    { "speaker": "Sarah Chen", "text": "Agreed on all points. Let's formalize these as action items. Now, before we wrap up, I want to discuss our strategic priorities for Q2. Based on what we've discussed today, I see three key priorities." },
+    { "speaker": "Sarah Chen", "text": "First, launch the AI analytics platform beta on schedule in April. Priya, you'll own this. Second, accelerate hiring to meet our growth targets. Elena and Michael, please collaborate on this. Third, close at least forty enterprise deals in Q2 to maintain our growth trajectory. James, that's your target." },
+    { "speaker": "Priya Sharma", "text": "Understood. I'll have the beta launch plan finalized by end of this week and will share it with the board." },
+    { "speaker": "James Wilson", "text": "Forty deals is ambitious but achievable. I'll need marketing to increase our lead generation budget by fifteen percent to support this." },
+    { "speaker": "Michael Torres", "text": "I can approve that increase. Let's set up a meeting next week to finalize the marketing budget adjustment." },
+    { "speaker": "Sarah Chen", "text": "Perfect. Let me summarize the key decisions from today's meeting. We've approved the revised eight-month timeline for the data platform migration. We've agreed to increase the referral bonus to eight thousand dollars and engage additional recruiting agencies. We've approved a fifteen percent increase in the marketing lead generation budget. And we've set Q2 targets of launching the AI platform beta, hiring twenty-three new team members, and closing forty enterprise deals." },
+    { "speaker": "Sarah Chen", "text": "Are there any other items anyone would like to raise before we close?" },
+    { "speaker": "Elena Popescu", "text": "Just one quick item. I'd like to propose we schedule a dedicated security review session next month. With the data platform migration and new AI features, we should ensure our security posture is robust." },
+    { "speaker": "Sarah Chen", "text": "Excellent suggestion. Priya, can you coordinate with Elena to schedule that? Let's aim for the second week of April." },
+    { "speaker": "Priya Sharma", "text": "Will do. I'll send out the invite by Friday." },
+    { "speaker": "Sarah Chen", "text": "Thank you all for a productive meeting. Let's execute on these priorities and reconvene for our Q2 review in June. Meeting adjourned." }
+  ]
+}

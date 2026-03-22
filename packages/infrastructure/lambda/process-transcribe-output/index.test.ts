@@ -548,7 +548,7 @@ describe('ProcessTranscribeOutput', () => {
       expect(segments[0].languageCode).toBe('es-ES');
     });
 
-    it('should default to ro-RO when no language identification is available', () => {
+    it('should default to en-US when no language identification is available', () => {
       const transcribeResult = {
         results: {
           transcripts: [{ transcript: 'Hello world' }],
@@ -595,7 +595,7 @@ describe('ProcessTranscribeOutput', () => {
       const segments = parseTranscribeOutput(transcribeResult);
 
       expect(segments).toHaveLength(1);
-      expect(segments[0].languageCode).toBe('ro-RO');
+      expect(segments[0].languageCode).toBe('en-US');
     });
 
     it('should handle segments with no confidence values', () => {
@@ -792,7 +792,7 @@ describe('ProcessTranscribeOutput', () => {
         endTime: 3600,
         speakerLabel: 'Speaker 1',
         text: 'Hello world. How are you today?',
-        languageCode: 'ro-RO', // Default when no language identification
+        languageCode: 'en-US', // Default when no language identification
       });
       expect(segments[0].confidence).toBeGreaterThan(0.9);
       

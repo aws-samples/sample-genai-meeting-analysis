@@ -97,6 +97,22 @@ npm run dev
 
 Frontend runs at `http://localhost:5173` and uses the deployed backend.
 
+### Sample Data
+
+The `sample/` folder includes files you can use to quickly test the application without recording a real meeting:
+
+- `board-meeting-sample.mp3` — A sample board meeting audio recording. Upload this through the application to test the full transcription and analysis pipeline.
+- `report-template.docx` — A Word template with `{{placeholders}}` for generating formatted meeting reports. Upload it in **Settings** → **Word Template**.
+- `report-template.md` — The markdown version of the report template, for reference.
+- `script.json` — The meeting script used to generate the sample audio, useful for verifying transcription accuracy.
+
+To try it out:
+
+1. Deploy the application and log in (see Quick Start above)
+2. Upload `sample/report-template.docx` as your Word template in **Settings**
+3. Upload `sample/board-meeting-sample.mp3` as a new meeting recording
+4. Wait for transcription and analysis to complete, then review the generated report
+
 ### Project Structure
 
 ```

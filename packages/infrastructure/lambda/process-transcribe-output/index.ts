@@ -320,8 +320,8 @@ function detectLanguageFromResult(transcribeResult: TranscribeResult): string {
     return topLanguage.language_code;
   }
 
-  // Default to Romanian since that's what we're using
-  return 'ro-RO';
+  // Default to English (US) when language identification is not available
+  return 'en-US';
 }
 
 /**
